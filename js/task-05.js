@@ -1,15 +1,15 @@
 const nameInput = document.querySelector("#name-input");
 const nameOutput = document.querySelector("#name-output");
 
-const guest = ({currentTarget}) => {
+const guest = ({ currentTarget }) => {
     
     if (currentTarget.value === '') {
         nameOutput.textContent = 'Anonymous';
     } else {
-       nameOutput.textContent = currentTarget.value; 
+        nameOutput.textContent = currentTarget.value;
     }
-}
+};
 
-nameInput.addEventListener("input", guest)
+nameInput.addEventListener("input", guest);
 
 

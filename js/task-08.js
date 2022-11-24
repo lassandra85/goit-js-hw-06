@@ -10,11 +10,6 @@ function submitForm(event) {
     
     if (email.value === "" || password.value === "") {
         alert("Please fill in all the fields!");
-    } /* else {
-        form.email = email.value;
-        form.password = password.value;
-    } */
-
-    /* console.log(form); */
+    } 
     event.currentTarget.reset();
 }   
