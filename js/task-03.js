@@ -14,16 +14,9 @@ const images = [
 ];
 
 
-const list = document.querySelector(".gallery");
-list.style.listStyle = "none";
 
-const galleryPhotos = images.map((image) => `<li><img class="photo" src="${image.url}" alt="${image.alt}"></li>`).join('');
-list.insertAdjacentHTML("afterbegin", galleryPhotos);
+const galleryList = document.querySelector('.gallery');
 
-const items = document.querySelectorAll(".photo");
-for (const item of items) {
-  item.style.width = "300px";
-  item.style.margin = "auto 10px";
-  item.style.borderRadius = "10px";
-} 
+const imagesItems = images.map(({ url, alt }) => `<li class="list-item"><img class="list-item" src="${url}" alt="${alt}"></li>`).join('');
 
+galleryList.insertAdjacentHTML("afterbegin", imagesItems);
