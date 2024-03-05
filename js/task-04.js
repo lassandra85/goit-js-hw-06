@@ -18,6 +18,14 @@ const onClickbuttonIncrement = buttonIncrement.addEventListener("click", () => {
 class Counter {
   constructor(selector, step, initialValue) {
     this.counterContainer = document.querySelector(selector);
+
+    this.incrementBtn = this.counterContainer.querySelector(
+      '[data-action="increment"]'
+    );
+    this.decrementBtn = this.counterContainer.querySelector(
+      '[data-action="decrement"]'
+    );
+    this.spanRef = this.counterContainer.querySelector("#initialValue");
     this.step = step;
     this.initialValue = initialValue;
   }
