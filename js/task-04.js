@@ -31,13 +31,8 @@ class Counter {
   }
 
   addListeners() {
-    const increment = this.counterContainer.querySelector(
-      '[data-action="increment"]'
-    );
-    const decrement = this.counterContainer.querySelector(
-      '[data-action="decrement"]'
-    );
-    const span = this.counterContainer.querySelector("#initialValue");
-    span.textContent = this.initialValue;
+    this.spanRef.textContent = this.initialValue;
+    this.incrementBtn.addListeners("click", this.handleIncrement);
+    this.decrementBtn.addListeners("click", this.handleDecrement);
   }
 }
